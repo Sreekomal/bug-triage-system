@@ -1,0 +1,58 @@
+.severity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Critical: Bright Red */
+.severity-critical {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+.severity-critical .badge-dot {
+  background-color: #ef4444;
+}
+
+/* High: Orange */
+.severity-high {
+  background-color: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+.severity-high .badge-dot {
+  background-color: #f97316;
+}
+
+/* Medium: Amber / Yellow */
+.severity-medium {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1px solid #fef08a;
+}
+.severity-medium .badge-dot {
+  background-color: #eab308;
+}
+
+/* Low: Green / Slate */
+.severity-low {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+.severity-low .badge-dot {
+  background-color: #22c55e;
+}

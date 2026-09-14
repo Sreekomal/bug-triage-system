@@ -1,0 +1,4 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted Precision,Weighted Recall,Weighted F1,Saved File
+Logistic Regression,0.5619,0.4169,0.5479,0.4213,0.7926,0.5619,0.632,logistic_regression.pkl
+Linear SVM,0.7541,0.4512,0.4783,0.4629,0.7774,0.7541,0.7649,linear_svm.pkl
+Multinomial Naive Bayes,0.8375,0.581,0.36,0.3734,0.7851,0.8375,0.7835,naive_bayes.pkl

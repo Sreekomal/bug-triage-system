@@ -1,0 +1,88 @@
+.stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-card-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-card-icon {
+  font-size: 1.25rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+}
+
+.stat-card-value {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.stat-card-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Variant Accents */
+.stat-card-primary .stat-card-icon {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+.stat-card-primary {
+  border-top: 3px solid #2563eb;
+}
+
+.stat-card-critical .stat-card-icon {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+.stat-card-critical {
+  border-top: 3px solid #ef4444;
+}
+
+.stat-card-high .stat-card-icon {
+  background-color: #fff7ed;
+  color: #ea580c;
+}
+.stat-card-high {
+  border-top: 3px solid #f97316;
+}
+
+.stat-card-duplicate .stat-card-icon {
+  background-color: #faf5ff;
+  color: #9333ea;
+}
+.stat-card-duplicate {
+  border-top: 3px solid #a855f7;
+}

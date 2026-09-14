@@ -1,0 +1,80 @@
+export const initialBugs = [
+  {
+    id: "BUG-101",
+    title: "Memory leak in background triage job worker",
+    description: "Background worker memory usage increases exponentially when processing large batch bug uploads.",
+    stepsToReproduce: "1. Upload batch of 500 tickets\n2. Observe memory usage in task monitor",
+    expectedResult: "Memory remains stable below 250MB",
+    actualResult: "Worker crashes with Out of Memory after 3 minutes",
+    environment: "Production",
+    severity: "Critical",
+    status: "Open",
+    isDuplicate: false,
+    createdAt: "2026-09-12"
+  },
+  {
+    id: "BUG-102",
+    title: "Model inference timeout on long stack traces",
+    description: "Severity classification times out when stack trace exceeds 15,000 characters.",
+    stepsToReproduce: "1. Submit bug report with large Java stack trace\n2. Click analyze",
+    expectedResult: "Inference completes within 2 seconds",
+    actualResult: "Gateway 504 Timeout after 30 seconds",
+    environment: "Production",
+    severity: "Critical",
+    status: "In Progress",
+    isDuplicate: false,
+    createdAt: "2026-09-11"
+  },
+  {
+    id: "BUG-103",
+    title: "Session token not refreshed upon expiration",
+    description: "When JWT expires after 1 hour, requests fail silently without refreshing or prompting user.",
+    stepsToReproduce: "1. Log in to dashboard\n2. Leave idle for 60 minutes\n3. Click refresh",
+    expectedResult: "Token refreshed smoothly in background",
+    actualResult: "Blank white screen displayed",
+    environment: "Staging",
+    severity: "High",
+    status: "Open",
+    isDuplicate: true,
+    createdAt: "2026-09-10"
+  },
+  {
+    id: "BUG-104",
+    title: "Database connection pool exhausted during peak sync",
+    description: "Database connection pool reaches max capacity during hourly telemetry sync.",
+    stepsToReproduce: "1. Trigger manual sync during scheduled cron window",
+    expectedResult: "Queries queue gracefully",
+    actualResult: "Connection refused error thrown",
+    environment: "Staging",
+    severity: "High",
+    status: "Resolved",
+    isDuplicate: false,
+    createdAt: "2026-09-09"
+  },
+  {
+    id: "BUG-105",
+    title: "Duplicate report: Safari iOS session drops on app switch",
+    description: "Users on Safari iOS report intermittent logouts when switching between browser tabs.",
+    stepsToReproduce: "1. Open app on Safari iOS\n2. Switch tabs for 3 mins\n3. Return to app",
+    expectedResult: "User remains authenticated",
+    actualResult: "Logged out to welcome screen",
+    environment: "Production",
+    severity: "Medium",
+    status: "Closed",
+    isDuplicate: true,
+    createdAt: "2026-09-08"
+  },
+  {
+    id: "BUG-106",
+    title: "Table column headers misaligned on small tablets",
+    description: "Bug history table headers shift slightly when viewed on screens between 768px and 900px.",
+    stepsToReproduce: "1. Resize window to 800px width\n2. Inspect table header alignments",
+    expectedResult: "Headers line up with columns",
+    actualResult: "First column offset by 4px",
+    environment: "QA",
+    severity: "Low",
+    status: "Resolved",
+    isDuplicate: false,
+    createdAt: "2026-09-07"
+  }
+];
